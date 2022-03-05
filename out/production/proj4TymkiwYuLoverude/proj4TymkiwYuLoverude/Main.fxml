@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * File: Main.fxml
+ * Names: Dylan Tymkiw, Alex Yu, Jasper Loverude
+ * Class: CS 361
+ * Project 4
+ * Date: February 28th
+-->
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Button?>
+<?import org.fxmisc.richtext.StyleClassedTextArea?>
+<?import javafx.scene.control.Separator?>
+
+<!--
+AnchorPane for primary stage with menu bar and tab pane
+-->
+
+
+<AnchorPane prefHeight="500.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/10"
+            xmlns:fx="http://javafx.com/fxml/1" fx:id="anchorPane" fx:controller="proj4TymkiwYuLoverude.Controller">
+
+    <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <!--
+        File menu with About, New, Open, Close, Save, and Save as menu items
+        -->
+        <Menu text="File">
+            <MenuItem mnemonicParsing="false" onAction="#handleAboutMenuItem"
+                      text="About..." accelerator="Shortcut+T"/>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#handleNewMenuItem" text="New" accelerator="Shortcut+N"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleOpenMenuItem" text="Open..." accelerator="Shortcut+O"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleCloseMenuItem" text="Close"
+                      fx:id="close" accelerator="Shortcut+W"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleSaveMenuItem" text="Save"
+                      fx:id="save" accelerator="Shortcut+S"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleSaveAsMenuItem" text="Save as..."
+                      fx:id="saveAs" accelerator="Shortcut+Shift+S"/>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#handleExitMenuItem" text="Exit" accelerator="Shortcut+ESC" />
+        </Menu>
+
+
+        <!--
+        Edit menu with Undo, Redo, Cut, Copy, Paste, Select all
+        -->
+        <Menu mnemonicParsing="false" text="Edit">
+            <MenuItem mnemonicParsing="false" onAction="#handleUndoMenuItem" text="Undo" accelerator="Shortcut+Z"
+                      fx:id="unDo"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleRedoMenuItem" text="Redo"
+                      accelerator="Shortcut+Shift+Z" fx:id="reDo"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleCutMenuItem" text="Cut" accelerator="Shortcut+X"
+                      fx:id="cut"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleCopyMenuItem" text="Copy" accelerator="Shortcut+C"
+                      fx:id="copy"/>
+            <MenuItem mnemonicParsing="false" onAction="#handlePasteMenuItem" text="Paste" accelerator="Shortcut+V"
+                      fx:id="paste"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleSelectAllMenuItem" text="Select all"
+                      fx:id="selectAll" accelerator="Shortcut+A"/>
+        </Menu>
+    </MenuBar>
+
+    <!--
+    ToolBar with "Hello" and "Goodbye" buttons
+    -->
+    <ToolBar layoutY="29.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Button mnemonicParsing="false" text="Hello" fx:id="Hello"  id="Hello" onAction="#handleHello"/>
+        <Button mnemonicParsing="false" text="Goodbye" id="Goodbye" onAction="#handleGoodbye"/>
+    </ToolBar>
+
+    <!--
+    - TabPane that contains tabs of text area,
+    - fit to AnchorPane to allow simultaneous resizing with the AnchorPane
+    -->
+    <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="512.0"
+            AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="68.0">
+    </TabPane>
+
+    <Separator AnchorPane.bottomAnchor=".0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="300.0"/>
+
+    <StyleClassedTextArea fx:id="console" layoutY="200" prefHeight="100.0" prefWidth="512.0"
+        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+        AnchorPane.topAnchor="400.0"/>
+
+</AnchorPane>

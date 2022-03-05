@@ -1,0 +1,59 @@
+/*
+ * File: java-keywords.css
+ * Names: Dylan Tymkiw, Alex Yu, Jasper Loverude
+ * Class: CS 361
+ * Project 4
+ * Date: February 28th
+ */
+
+/* Style for keywords */
+.keyword {
+    -fx-fill: purple;
+    -fx-font-weight: bold;
+}
+
+
+/* Style for semicolons */
+.semicolon {
+    -fx-font-weight: bold;
+}
+
+
+/* Style for parentheses */
+.paren {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+
+
+/* Style for brackets */
+.bracket {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+
+
+/* Style for braces */
+.brace {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+
+
+/* Style for strings */
+.string {
+    -fx-fill: blue;
+}
+
+
+/* Style for comments */
+.comment {
+    -fx-fill: cadetblue;
+}
+
+
+/* Style for integers */
+.int {
+    -fx-fill: firebrick;
+    -fx-font-weight: bold;
+}

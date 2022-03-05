@@ -1,0 +1,32 @@
+/*
+ * File: Main.css
+ * Names: Dylan Tymkiw, Alex Yu, Jasper Loverude
+ * Class: CS 361
+ * Project 4
+ * Date: February 28th
+ */
+
+/* Make font size to 10 */
+.root {
+    -fx-font-size: 10pt;
+}
+
+#console{
+    -fx-background-color: black;
+}
+
+/* Colors the "Hello" button with light green and adds black border */
+#Hello{
+    -fx-background-color: LightGreen;
+    -fx-background-radius:  5;
+    -fx-border-color:   black;
+    -fx-border-radius:  5;
+}
+
+/* Colors the "Goodbye" button with pink and adds black border */
+#Goodbye{
+    -fx-background-color: pink;
+    -fx-background-radius:  5;
+    -fx-border-color:   black;
+    -fx-border-radius:  5;
+}
